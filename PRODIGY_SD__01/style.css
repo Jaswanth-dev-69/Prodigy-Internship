@@ -1,0 +1,58 @@
+ body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the entire box in the middle of the page */
+body {
+    display: grid;
+    justify-content: center; /* Horizontally center the box */
+    place-items: center; /* Vertically center the box */
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Background gradient */
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the form container */
+form {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    position: relative; /* For smooth movement when it moves up */
+    text-align: center;
+    transition: transform 0.5s ease-in-out; /* Smooth scroll effect */
+}
+input,select,button{
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    color: #d1d5db;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Move the form box slightly up on click */
+form.moved-up {
+    transform: translateY(-50px);
+}
+
+/* Center the result below the box */
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Match the form's width */
+    position: relative;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+#result.visible {
+    opacity: 1; /* Makes the result visible after conversion */
+}
